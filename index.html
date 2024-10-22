@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Pixel Editor</h1>
+    <div id="image-upload-section">
+      <p class="instruction">Send me a picture to edit pixels</p>
+      <input type="file" id="fileInput" accept="image/*">
+    </div>
+
+    <div id="image-edit-section" class="hidden">
+      <img id="uploadedImage" src="" alt="uploaded" class="uploaded-image">
+      <div class="input-container">
+        <input type="number" id="widthInput" placeholder="Width" class="input-field">
+        <input type="number" id="heightInput" placeholder="Height" class="input-field">
+      </div>
+      <button id="resizeButton" class="btn resize-btn">Resize Image</button>
+      <div id="resized-section" class="hidden">
+        <h2 class="subtitle">Resized Image:</h2>
+        <img id="resizedImage" src="" alt="resized" class="uploaded-image">
+        <div class="button-group">
+          <button id="saveButton" class="btn save-btn">Save</button>
+          <button id="closeButton" class="btn close-btn">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="gallery-section" class="hidden">
+      <h2 class="subtitle">Gallery</h2>
+      <div id="gallery" class="gallery-grid"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
